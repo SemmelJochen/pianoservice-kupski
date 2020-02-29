@@ -120,8 +120,8 @@ class App extends React.Component {
           <ThemeProvider theme={theme} >
             <Router>
               <Switch>
-                <Route exact path="/" component={this.content} />
-                <Route path="/impressum" component={Impressum} />
+                <Route exact path="/react-website-test/" component={this.content} />
+                <Route path="/react-website-test/impressum" component={Impressum} />
                 <Route component={NoMatch} />
               </Switch>
             </Router>
