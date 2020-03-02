@@ -1,20 +1,23 @@
 {
-  "name": "papa-website",
+  "name": "pianoservice-kupski",
+  "homepage": "http://pianoservice-kupski.de",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.9.4",
+    "@material-ui/core": "^4.9.5",
     "@material-ui/icons": "^4.9.1",
     "@mdi/js": "^4.9.95",
     "google-maps-react": "^2.0.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "react-scroll": "^1.7.16",
     "react-scroll-parallax": "^2.3.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }

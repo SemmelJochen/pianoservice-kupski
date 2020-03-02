@@ -47,7 +47,7 @@ export default function Footer(props) {
                 padding: "30px",
             }} >
 
-                <Link onClick={() => window.location.href = "/react-website-test/impressum"} component={MenuItem} color="inherit">
+                <Link onClick={() => window.location.href = "/impressum"} component={MenuItem} color="inherit">
                     Impressum
                     </Link>
                 <Link component={MenuItem} color="inherit">

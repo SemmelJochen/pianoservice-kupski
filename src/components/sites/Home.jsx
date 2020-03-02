@@ -15,12 +15,12 @@ class Home extends React.Component {
     };
 
     componentDidMount() {
-        //window.addEventListener('scroll', () => this.handleScroll());
+        window.addEventListener('scroll', () => this.handleScroll());
     }
 
     handleScroll() {
-        if (window.scrollY % 10 === 0)
-            this.setState({ blurValue: window.scrollY * 0.02 })
+        //        if (window.scrollY % 5 === 0)
+        //this.setState({ blurValue: window.scrollY * 0.02 })
     }
     handleLoad() {
         this.props.parallaxController.update();
@@ -64,8 +64,24 @@ class Home extends React.Component {
                                         alignItems: "center",
                                         width: "80%",
                                     }}>
-                                        <Fade in timeout={{ enter: 2000 }}><Typography variant="h1" style={{ fontWeight: 500, color: this.props.theme.palette.primary.contrastText }}>Pianoservice Kupski</Typography></Fade>
-                                        <Fade in timeout={{ enter: 4000 }}><Typography variant="h4" style={{ fontWeight: 500, color: this.props.theme.palette.primary.contrastText }}>Ihre Ohren werden Augen machen</Typography></Fade>
+                                        <Fade in timeout={{ enter: 2000 }}>
+                                            <Typography variant="h1"
+                                                style={{
+                                                    fontWeight: 500,
+                                                    color: this.props.theme.palette.primary.contrastText
+                                                }}>
+                                                Pianoservice Kupski
+                                                </Typography>
+                                        </Fade>
+                                        <Fade in timeout={{ enter: 4000 }}>
+                                            <Typography variant="h4"
+                                                style={{
+                                                    fontWeight: 500,
+                                                    color: this.props.theme.palette.primary.contrastText
+                                                }}>
+                                                Ihre Ohren werden Augen machen
+                                                </Typography>
+                                        </Fade>
                                     </div>),
                                 amount: 0.6,
                                 expanded: false,

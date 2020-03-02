@@ -4,7 +4,7 @@ import { createMuiTheme, ThemeProvider, responsiveFontSizes } from '@material-ui
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NoMatch from "./components/sites/NoMatch";
 import Home from "./components/sites/Home"
-import { CssBaseline } from '@material-ui/core';
+import { CssBaseline, Typography } from '@material-ui/core';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import About from './components/sites/About';
 import Services from './components/sites/Services';
@@ -14,7 +14,8 @@ import Footer from './components/menubar/Footer';
 import Impressum from './components/sites/Impressum'
 import References from './components/sites/References';
 import { animateScroll as scroll } from 'react-scroll'
-
+import bg from './ressources/img/bg.jpg'
+import logo from './ressources/img/logo-font.png'
 
 const theme = responsiveFontSizes(createMuiTheme({
   palette: {
@@ -116,18 +117,42 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <ParallaxProvider>
+        {/*}ParallaxProvider>
           <ThemeProvider theme={theme} >
             <Router>
               <Switch>
-                <Route exact path="/react-website-test/" component={this.content} />
-                <Route path="/react-website-test/impressum" component={Impressum} />
+                <Route exact path="/" component={this.content} />
+                <Route path="/impressum" component={Impressum} />
                 <Route component={NoMatch} />
               </Switch>
             </Router>
             <Footer />
           </ThemeProvider>
-        </ParallaxProvider>
+    </ParallaxProvider>*/}
+        <ThemeProvider theme={theme} >
+          <div className="App"
+            style={{
+              //backgroundImage: `url(${bg})`,
+              backgroundColor: theme.palette.primary.main,
+              backgroundSize: "auto 100%",
+              backgroundPosition: "center center",
+              backgroundRepeat: "no-repeat",
+              width: "100%",
+              height: "100vh",
+              display: "grid",
+              alignContent: "center",
+              justifyItems: "center",
+
+            }}>
+            <Typography variant="h1" style={{color: "white", paddingBottom: "10px"}}>
+              Pianoservice Kupski
+            </Typography>
+              <Typography variant="h2" style={{color: "white"}}>
+                Hier kommt bald was!
+        </Typography>
+
+          </div>
+        </ThemeProvider>
       </React.Fragment>
     );
   }
